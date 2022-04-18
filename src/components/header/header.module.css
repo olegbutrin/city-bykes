@@ -1,0 +1,23 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4vmin;
+  margin-bottom: 2vmin;
+}
+
+.Header:first-child {
+  margin-left: 0;
+}
+
+.Header:last-child {
+  margin-right: 0;
+}
+
+.HeaderItem {
+  display: block;
+  padding: 0;
+  margin: 0 2vmin;
+  font-size: calc(14px + 2vmin);
+}
