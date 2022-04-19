@@ -8,6 +8,7 @@ export const initialState: TNetworksStore = {
   error: "",
   raw: [],
   companies: {},
+  active: "",
 };
 
 export const networksReducer: Reducer<TNetworksStore, TNetworksActions> = (
@@ -26,7 +27,12 @@ export const networksReducer: Reducer<TNetworksStore, TNetworksActions> = (
         error: "",
         raw: action.payload.raw,
         companies: action.payload.companies,
+        active: Object.keys(action.payload.companies).length
+          ? Object.keys(action.payload.companies)[0]
+          : "",
       };
+    case constants.NETWORKS_SETACTIVE:
+      return { ...state, active: action.payload };
     default:
       return state;
   }

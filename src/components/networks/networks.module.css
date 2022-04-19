@@ -1,0 +1,72 @@
+.NetworksControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ControlButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-height: 3vmin;
+  height: 3vmin;
+  padding: 0.5vmin;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.ControlButtonIcon {
+  height: 2vmin;
+  width: 2vmin;
+  margin-right: 0.5vmin;
+}
+
+.ControlButtonText {
+  font-size: calc(9px + 0.5vmin);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ErrorText {
+  margin-top: 4vmin;
+  font-size: calc(10px + 0.5vmin);
+  text-align: center;
+}
+
+.NetworkCard,
+.NetworkCardActive {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  padding: 1vmin 1vmin 1vmin 3vmin;
+  margin: 0 1vmin;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.NetworkCard:hover {
+  background-color: lightgray;
+}
+
+.NetworkCardActive::before {
+  content: "\25B6";
+  position: absolute;
+  left: 0;
+  padding: 0;
+
+}
+
+.NetworkCardText {
+  display: block;
+  font-size: calc(10px + 0.5vmin);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

@@ -20,3 +20,15 @@
   width: 90vmin;
   height: 90vmin;
 }
+
+.Columns {
+  display: Grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 8vmin;
+  width: 100%;
+  height: 100%;
+  justify-content: stretch;
+  align-content: stretch;
+  padding-bottom: 20vmin;
+  max-height: 70vmin;
+}

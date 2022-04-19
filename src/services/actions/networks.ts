@@ -18,10 +18,16 @@ export interface INetworksSuccess {
   readonly payload: TNetworksSuccessPayload;
 }
 
+export interface INetworksSetActive {
+  readonly type: typeof constants.NETWORKS_SETACTIVE;
+  readonly payload: string;
+}
+
 export type TNetworksActions =
   | INetworksRequest
   | INetworksError
-  | INetworksSuccess;
+  | INetworksSuccess
+  | INetworksSetActive;
 
 export const getNetworksList = () => {
   return (dispatch: Dispatch) => {
@@ -29,24 +35,46 @@ export const getNetworksList = () => {
     apiGetNetworks(
       (result) => {
         const filtered: TFilteredCompanies = {};
-        result.networks.forEach((item) => {
-          item.company.forEach((company) => {
-            if (filtered[company] === undefined) {
-              filtered[company] = item.id;
+        try {
+          result.networks.forEach((item) => {
+            if (item && item.company) {
+              if (typeof item.company === "string") {
+                filtered[item.company] = item.id;
+              } else {
+                item.company.forEach((company) => {
+                  if (filtered[company] === undefined) {
+                    filtered[company] = item.id;
+                  }
+                });
+              }
             }
           });
-        });
+        } catch (error) {
+          dispatch({
+            type: constants.NETWORKS_ERROR,
+            payload: "Error API Data parsing",
+          } as INetworksError);
+        }
         dispatch({
           type: constants.NETWORKS_SUCCESS,
           payload: { raw: result.networks, companies: filtered },
         } as INetworksSuccess);
       },
-      (result) => {
+      (error) => {
         dispatch({
           type: constants.NETWORKS_ERROR,
-          payload: result,
+          payload: error,
         } as INetworksError);
       }
     );
+  };
+};
+
+export const setActiveNetwork = (network: string) => {
+  return (dispatch: Dispatch) => {
+    dispatch({
+      type: constants.NETWORKS_SETACTIVE,
+      payload: network,
+    } as INetworksSetActive);
   };
 };

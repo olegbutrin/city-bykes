@@ -2,14 +2,14 @@ import {
   TApiRequest,
   TApiNetworks,
   TApiStations,
-  TNetworkInfo,
+  TStationsNetworkInfo,
   TRawNetworks,
   TApiCallback,
 } from "./types";
 
 const API_URL = "http://api.citybik.es";
 const NETWORKS_REQUEST = "/v2/networks?fields=id,company";
-const STATIONS_REQUEST = "/v2/networks";
+const STATIONS_REQUEST = "/v2/networks/";
 
 const apiRequest = (
   url: string,
@@ -38,7 +38,7 @@ const apiGetNetworks: TApiNetworks = (onSuccess, onError) => {
 };
 
 const apiGetStations: TApiStations = (id, onSuccess, onError) => {
-  const api = apiRequest as TApiRequest<TNetworkInfo, string>;
+  const api = apiRequest as TApiRequest<TStationsNetworkInfo, string>;
   api(API_URL + STATIONS_REQUEST + id, onSuccess, onError);
 };
 

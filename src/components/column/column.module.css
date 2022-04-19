@@ -1,0 +1,37 @@
+.Column {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  max-height: 76vmin;
+}
+
+.ColumnTitle {
+  display: block;
+  padding: 0 0 1vmin 0;
+  margin: 1vmin;
+  font-size: calc(8px + 1vmin);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 100%;
+  border-bottom: 2px dashed lightslategray;
+}
+
+.ColumnPin {
+  margin: 1vmin 0;
+}
+
+.ColumnBody {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 100%;
+}

@@ -10,8 +10,8 @@ export type TRawNetworkRow = {
 };
 
 export type TRawNetworks = {
-  networks: Array<TRawNetworkRow>
-}
+  networks: Array<TRawNetworkRow>;
+};
 
 export type TStationRow = {
   empty_slots: number;
@@ -20,34 +20,34 @@ export type TStationRow = {
   latitude: number;
   longitude: number;
   name: string;
-  timestamp: Date;
+  timestamp: string;
   extra: {
+    address: string;
     status: {
       code: number;
       message: string;
       online: boolean;
-    }
-  }
-}
+    };
+  };
+};
 
-export type TNetworkInfo = {
+export type TStationsNetworkInfo = {
   network: {
-    href: string,
-    id: string,
-    name: string,
+    href: string;
+    id: string;
+    name: string;
     location: {
-      city: string,
-      country: string,
-      latitude: number,
-      longitude: number
-    },
-    stations: Array<TStationRow>
-  }
-}
+      city: string;
+      country: string;
+      latitude: number;
+      longitude: number;
+    };
+    stations: Array<TStationRow>;
+    company: Array<string>;
+  };
+};
 
-export type TApiCallback<T> = (
-  result: T
-) => void;
+export type TApiCallback<T> = (result: T) => void;
 
 export type TApiRequest<T, U> = (
   url: string,
@@ -62,14 +62,14 @@ export type TApiNetworks = (
 
 export type TApiStations = (
   id: string,
-  onSuccess: TApiCallback<TNetworkInfo>,
+  onSuccess: TApiCallback<TStationsNetworkInfo>,
   onError: TApiCallback<string>
 ) => void;
 
 export type TNetworksSuccessPayload = {
   raw: Array<TRawNetworkRow>;
   companies: TFilteredCompanies;
-}
+};
 
 // ==== STORES ===
 
@@ -80,4 +80,11 @@ export type TNetworksStore = {
   error: string;
   raw: Array<TRawNetworkRow>;
   companies: TFilteredCompanies;
-}
+  active: string;
+};
+
+export type TStationsStore = {
+  request: boolean;
+  error: string;
+  raw: TStationsNetworkInfo | null;
+};

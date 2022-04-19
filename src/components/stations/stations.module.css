@@ -1,0 +1,140 @@
+.StationInfoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: 2vmin;
+  border-bottom: 2px dashed gray;
+}
+
+.StationInfoName {
+  font-size: calc(12px + 1vmin);
+  font-weight: 600;
+}
+
+.StationInfoCompanies {
+  font-size: calc(8px + 0.4vmin);
+  font-weight: 600;
+  padding-right: 4vmin;
+  color: grey;
+}
+
+.StationInfoLocation {
+  display: block;
+  padding: 1vmin 0 0 4vmin;
+  position: relative;
+}
+
+.StationInfoLocation::before {
+  content: "\1F30D";
+  position: absolute;
+  left: 0;
+}
+
+.StationInfoCount {
+  font-size: calc(8px + 0.6vmin);
+  padding-left: 4vmin;
+  margin-top: 1vmin;
+}
+
+.StationCard{
+  display: block;
+  padding: 1vmin 1vmin 1vmin 3.5vmin;
+  margin-left: 0.5vmin;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.StationCardFav,
+.StationCardNoFav {
+  font-size: calc(18px + 1vmin);
+  color: #dddddd;
+  position: absolute;
+  left: 0px;
+  top: 0.4vmin;
+  cursor: pointer;
+}
+
+.StationCardFav {
+  color: tomato;
+}
+
+.StationCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.StationName {
+  font-size: calc(10px + 0.5vmin);
+  font-weight: 600;
+  box-sizing: border-box;
+  padding-right: 2vmin;
+}
+
+.StationAddress {
+  font-size: calc(6px + 0.5vmin);
+  padding: 0.6vmin 0 0 2vmin;
+  position: relative;
+}
+
+.StationAddress::before {
+  content: "\1F30D";
+  position: absolute;
+  left: 0;
+}
+
+.StationData {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: 1vmin;
+}
+
+.StationBikes,
+.StationBikesNo,
+.StationTime {
+  font-size: calc(9px + 0.5vmin);
+  vertical-align: baseline;
+  box-sizing: border-box;
+  margin-right: 2vmin;
+}
+
+.StationBikes::before {
+  content: "\1F6B2";
+  position: relative;
+  padding-right: 0.6vmin;
+  top: -2px;
+  left: 0;
+}
+
+.StationBikesNo::before {
+  content: "\1F6B3";
+  position: relative;
+  padding-right: 0.6vmin;
+  top: 0;
+  left: 0;
+}
+
+.StationTime::before {
+  content: "\1F550";
+  position: relative;
+  padding-right: 0.6vmin;
+  top: 0;
+  left: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
