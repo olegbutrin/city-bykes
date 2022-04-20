@@ -14,6 +14,7 @@ import css from "./app.module.css";
 const App = () => {
   const dispatch = useDispatch();
 
+  // dispatch API request at mount
   useEffect(() => {
     dispatch(getNetworksList());
   }, [dispatch]);
@@ -21,6 +22,8 @@ const App = () => {
   const { companies, active } = useSelector((store) => store.networks);
   const { request, error } = useSelector((store) => store.stations);
 
+  // dispatch API request for networks info/stations
+  // depends store change
   useEffect(() => {
     if (Object.keys(companies).length && active) {
       dispatch(getStationsInfo(companies[active]));
@@ -32,10 +35,8 @@ const App = () => {
       <div className={css.Contents}>
         <Header />
         <div className={css.Columns}>
-          <Column title={"Bikes Networks"} pin={<NetworksControl />}>
-            <>
-              <NetworksViewer />
-            </>
+          <Column title={"Bike Network Companies "} pin={<NetworksControl />}>
+            <NetworksViewer />
           </Column>
           <Column
             title="Network Info"
@@ -46,6 +47,15 @@ const App = () => {
               {!request && !error && <StationsViewer />}
             </>
           </Column>
+        </div>
+        <div className={css.SourceCode}>
+          <a
+            href={"https://github.com/olegbutrin/city-bykes/"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
+            [ Source Code on GitHub ]
+          </a>
         </div>
       </div>
     </div>
