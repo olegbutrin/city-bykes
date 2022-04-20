@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/city-bykes/static/css/main.26e0a564.css",
-    "main.js": "/city-bykes/static/js/main.b6854117.js",
+    "main.js": "/city-bykes/static/js/main.066105ac.js",
     "static/js/787.3366fd9c.chunk.js": "/city-bykes/static/js/787.3366fd9c.chunk.js",
     "index.html": "/city-bykes/index.html",
     "static/media/refresh.svg": "/city-bykes/static/media/refresh.9a571eb846bb15da9ccbc4c12f2fb416.svg",
     "main.26e0a564.css.map": "/city-bykes/static/css/main.26e0a564.css.map",
-    "main.b6854117.js.map": "/city-bykes/static/js/main.b6854117.js.map",
+    "main.066105ac.js.map": "/city-bykes/static/js/main.066105ac.js.map",
     "787.3366fd9c.chunk.js.map": "/city-bykes/static/js/787.3366fd9c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.26e0a564.css",
-    "static/js/main.b6854117.js"
+    "static/js/main.066105ac.js"
   ]
 }
