@@ -7,7 +7,7 @@ import {
   TApiCallback,
 } from "./types";
 
-const API_URL = "http://api.citybik.es";
+const API_URL = "https://api.citybik.es";
 const NETWORKS_REQUEST = "/v2/networks?fields=id,company";
 const STATIONS_REQUEST = "/v2/networks/";
 
