@@ -1,0 +1,25 @@
+@import "../../defaults.scss";
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: $min4;
+  margin-bottom: $min2;
+}
+
+.Header:first-child {
+  margin-left: 0;
+}
+
+.Header:last-child {
+  margin-right: 0;
+}
+
+.HeaderItem {
+  display: block;
+  padding: 0;
+  margin: 0 $min4;
+  font-size: $header;
+}

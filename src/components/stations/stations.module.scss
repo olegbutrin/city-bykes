@@ -1,0 +1,142 @@
+@import "../../defaults.scss";
+
+.StationInfoCard {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: $min2;
+  border-bottom: 2px dashed $gray;
+}
+
+.StationInfoName {
+  font-size: $subheader;
+  font-weight: 600;
+}
+
+.StationInfoCompanies {
+  font-size: $text6;
+  font-weight: 600;
+  padding-right: $min4;
+  color: $gray;
+}
+
+.StationInfoLocation {
+  display: block;
+  padding: $min 0 0 $min4;
+  position: relative;
+}
+
+.StationInfoLocation::before {
+  content: "\1F30D";
+  position: absolute;
+  left: 0;
+}
+
+.StationInfoCount {
+  font-size: $text6;
+  padding-left: $min4;
+  margin-top: $min;
+}
+
+.StationCard{
+  display: block;
+  padding: $min $min $min $min3;
+  margin-left: $min;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.StationCardFav,
+.StationCardNoFav {
+  font-size: $subheader;
+  color: $light;
+  position: absolute;
+  left: 0px;
+  top: $min;
+  cursor: pointer;
+}
+
+.StationCardFav {
+  color: $red;
+}
+
+.StationCardContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+}
+
+.StationName {
+  font-size: $text9;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding-right: $min2;
+}
+
+.StationAddress {
+  font-size: $text6;
+  padding: $min 0 0 $min2;
+  position: relative;
+}
+
+.StationAddress::before {
+  content: "\1F30D";
+  position: absolute;
+  left: 0;
+}
+
+.StationData {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-top: $min;
+}
+
+.StationBikes,
+.StationBikesNo,
+.StationTime {
+  font-size: $text6;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  margin-right: $min2;
+}
+
+.StationBikes::before {
+  content: "\1F6B2";
+  position: relative;
+  padding-right: $min;
+  top: -2px;
+  left: 0;
+}
+
+.StationBikesNo::before {
+  content: "\1F6B3";
+  position: relative;
+  padding-right: $min;
+  top: 0;
+  left: 0;
+}
+
+.StationTime::before {
+  content: "\1F550";
+  position: relative;
+  padding-right: $min;
+  top: 0;
+  left: 0;
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
