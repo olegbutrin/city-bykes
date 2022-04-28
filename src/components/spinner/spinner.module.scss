@@ -1,3 +1,5 @@
+@import "../../defaults.scss";
+
 .SpinnerBox {
   display: flex;
   flex-direction: column;
@@ -8,7 +10,7 @@
 }
 
 .Spinner {
-  width: 10vmin;
+  width: $gap;
   pointer-events: none;
 }
 

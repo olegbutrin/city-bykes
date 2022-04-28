@@ -1,4 +1,4 @@
-import css from "./column.module.css";
+import css from "./column.module.scss";
 
 interface IColumnProps {
   title?: string;

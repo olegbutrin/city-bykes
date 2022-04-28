@@ -1,7 +1,7 @@
 import { SyntheticEvent } from "react";
 import { useDispatch } from "../../services/hooks";
 import { getNetworksList } from "../../services/actions/networks"
-import css from "./networks.module.css";
+import css from "./networks.module.scss";
 import refreshIcon from "../../assets/refresh.svg";
 
 interface IControlButton {

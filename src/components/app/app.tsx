@@ -9,7 +9,7 @@ import { getNetworksList } from "../../services/actions/networks";
 import { getStationsInfo } from "../../services/actions/stations";
 import { useDispatch, useSelector } from "../../services/hooks";
 import { useEffect } from "react";
-import css from "./app.module.css";
+import css from "./app.module.scss";
 
 const App = () => {
   const dispatch = useDispatch();

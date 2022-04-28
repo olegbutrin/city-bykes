@@ -1,6 +1,6 @@
 import { useSelector } from "../../services/hooks";
 import { GoogleMapLink } from "./utils";
-import css from "./stations.module.css";
+import css from "./stations.module.scss";
 
 interface IStationCompanies {
   company: Array<string> | string;

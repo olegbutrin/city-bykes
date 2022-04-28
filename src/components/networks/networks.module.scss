@@ -1,3 +1,5 @@
+@import "../../defaults.scss";
+
 .NetworksControl {
   display: flex;
   flex-direction: row;
@@ -10,28 +12,28 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  max-height: 3vmin;
-  height: 3vmin;
-  padding: 0.5vmin;
+  max-height: $min3;
+  height: $min3;
+  padding: $min;
   box-sizing: border-box;
   cursor: pointer;
 }
 
 .ControlButtonIcon {
-  height: 2vmin;
-  width: 2vmin;
+  height: $min2;
+  width: $min2;
   margin-right: 0.5vmin;
 }
 
 .ControlButtonText {
-  font-size: calc(9px + 0.5vmin);
+  font-size: $text9;
   font-weight: 600;
   text-transform: uppercase;
 }
 
 .ErrorText {
-  margin-top: 4vmin;
-  font-size: calc(10px + 0.5vmin);
+  margin-top: $min4;
+  font-size: $text9;
   text-align: center;
 }
 
@@ -41,15 +43,16 @@
   flex-direction: row;
   align-items: baseline;
   justify-content: flex-start;
-  padding: 1vmin 1vmin 1vmin 3vmin;
-  margin: 0 1vmin;
+  padding: $min $min $min $min3;
+  margin: 0 $min;
   cursor: pointer;
   position: relative;
+  font-size: $text9;
   box-sizing: border-box;
 }
 
 .NetworkCard:hover {
-  background-color: lightgray;
+  background-color: $light;
 }
 
 .NetworkCardActive::before {
@@ -62,7 +65,7 @@
 
 .NetworkCardText {
   display: block;
-  font-size: calc(10px + 0.5vmin);
+  font-size: $text9;
 }
 
 ul {

@@ -1,28 +1,30 @@
+@import "../../defaults.scss";
+
 .StationInfoCard {
   display: flex;
   flex-direction: column;
   align-items: baseline;
   justify-content: flex-start;
   width: 100%;
-  padding-bottom: 2vmin;
-  border-bottom: 2px dashed gray;
+  padding-bottom: $min2;
+  border-bottom: 2px dashed $gray;
 }
 
 .StationInfoName {
-  font-size: calc(12px + 1vmin);
+  font-size: $subheader;
   font-weight: 600;
 }
 
 .StationInfoCompanies {
-  font-size: calc(8px + 0.4vmin);
+  font-size: $text6;
   font-weight: 600;
-  padding-right: 4vmin;
-  color: grey;
+  padding-right: $min4;
+  color: $gray;
 }
 
 .StationInfoLocation {
   display: block;
-  padding: 1vmin 0 0 4vmin;
+  padding: $min 0 0 $min4;
   position: relative;
 }
 
@@ -33,31 +35,31 @@
 }
 
 .StationInfoCount {
-  font-size: calc(8px + 0.6vmin);
-  padding-left: 4vmin;
-  margin-top: 1vmin;
+  font-size: $text6;
+  padding-left: $min4;
+  margin-top: $min;
 }
 
 .StationCard{
   display: block;
-  padding: 1vmin 1vmin 1vmin 3.5vmin;
-  margin-left: 0.5vmin;
+  padding: $min $min $min $min3;
+  margin-left: $min;
   position: relative;
   box-sizing: border-box;
 }
 
 .StationCardFav,
 .StationCardNoFav {
-  font-size: calc(18px + 1vmin);
-  color: #dddddd;
+  font-size: $subheader;
+  color: $light;
   position: absolute;
   left: 0px;
-  top: 0.4vmin;
+  top: $min;
   cursor: pointer;
 }
 
 .StationCardFav {
-  color: tomato;
+  color: $red;
 }
 
 .StationCardContainer {
@@ -68,15 +70,15 @@
 }
 
 .StationName {
-  font-size: calc(10px + 0.5vmin);
+  font-size: $text9;
   font-weight: 600;
   box-sizing: border-box;
-  padding-right: 2vmin;
+  padding-right: $min2;
 }
 
 .StationAddress {
-  font-size: calc(6px + 0.5vmin);
-  padding: 0.6vmin 0 0 2vmin;
+  font-size: $text6;
+  padding: $min 0 0 $min2;
   position: relative;
 }
 
@@ -91,22 +93,22 @@
   flex-direction: row;
   align-items: baseline;
   justify-content: space-between;
-  padding-top: 1vmin;
+  padding-top: $min;
 }
 
 .StationBikes,
 .StationBikesNo,
 .StationTime {
-  font-size: calc(9px + 0.5vmin);
+  font-size: $text6;
   vertical-align: baseline;
   box-sizing: border-box;
-  margin-right: 2vmin;
+  margin-right: $min2;
 }
 
 .StationBikes::before {
   content: "\1F6B2";
   position: relative;
-  padding-right: 0.6vmin;
+  padding-right: $min;
   top: -2px;
   left: 0;
 }
@@ -114,7 +116,7 @@
 .StationBikesNo::before {
   content: "\1F6B3";
   position: relative;
-  padding-right: 0.6vmin;
+  padding-right: $min;
   top: 0;
   left: 0;
 }
@@ -122,7 +124,7 @@
 .StationTime::before {
   content: "\1F550";
   position: relative;
-  padding-right: 0.6vmin;
+  padding-right: $min;
   top: 0;
   left: 0;
 }

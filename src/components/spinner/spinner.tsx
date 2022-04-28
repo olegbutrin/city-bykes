@@ -1,4 +1,4 @@
-import css from "./spinner.module.css";
+import css from "./spinner.module.scss";
 import refreshIcon from "../../assets/refresh.svg";
 
 const Spinner = () => {

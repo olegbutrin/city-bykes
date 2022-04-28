@@ -5,7 +5,7 @@ import {
   setStoreFavorites,
 } from "../../services/utils/storage";
 import { TStationRow } from "../../services/utils/types";
-import css from "./stations.module.css";
+import css from "./stations.module.scss";
 import { GoogleMapLink } from "./utils";
 
 const fixedDate = (dateStr: string) => {

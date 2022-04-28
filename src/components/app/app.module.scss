@@ -9,22 +9,23 @@
   height: 100vh;
   overflow: hidden;
 }
+@import "../../defaults.scss";
 
 .Contents {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  max-width: 90vmin;
-  max-height: 90vmin;
-  width: 90vmin;
-  height: 90vmin;
+  max-width: $max;
+  max-height: $max;
+  width: $max;
+  height: $max;
 }
 
 .Columns {
   display: Grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 8vmin;
+  column-gap: $gap;
   width: 100%;
   height: 100%;
   justify-content: stretch;
@@ -34,5 +35,5 @@
 .SourceCode {
   position: absolute;
   bottom: 0;
-  padding-bottom: 4vmin;
+  padding-bottom: $min4;
 }

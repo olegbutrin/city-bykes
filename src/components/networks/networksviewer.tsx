@@ -1,7 +1,7 @@
 import { setActiveNetwork } from "../../services/actions/networks";
 import { useSelector, useDispatch } from "../../services/hooks";
 import Spinner from "../spinner/spinner";
-import css from "./networks.module.css";
+import css from "./networks.module.scss";
 
 interface INetworksCard {
   text: string;
